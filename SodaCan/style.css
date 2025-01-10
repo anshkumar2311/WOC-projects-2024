@@ -1,0 +1,49 @@
+.soda {
+  --left: 0vw;
+  background:
+    var(--url) var(--left),
+    url(sodacan.png) 0 0;
+  background-size: auto 100%;
+  width: 35vw;
+  height: 45.4vw;
+  background-blend-mode: multiply;
+  mask-image: url(sodacan.png);
+  mask-size: auto 100%;
+  transition: 0.8s;
+  animation: onScroll;
+  animation-timeline: view(auto);
+}
+
+.product:hover .soda:nth-child(2),
+.product:hover .soda:nth-child(1) {
+  --left: -50vw;
+}
+
+@keyframes onScroll {
+  from {
+    transform: translateY(0vw) translateX(0) rotate(0deg);
+  }
+
+  to {
+    transform: translateY(-55vw) translateX(-47vw) rotate(50deg);
+  }
+}
+
+.textDiv h1 {
+  animation: textAni;
+  animation-timeline: view(40% auto);
+}
+
+@keyframes textAni {
+  0% {
+    opacity: 0.2;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
