@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+
+.eyes-container {
+  display: flex;
+  gap: 50px;
+}
+
+.eye {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #ffffff 15%, #fbe1e1 70%, #f6b4b2 100%);
+  border-radius: 50%;
+  border: 4px solid #333333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide anything outside the eye boundary */
+  cursor: pointer;
+}
+
+.upper-lid,
+.lower-lid {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background-color: #333;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 2; /* Ensure the eyelids are above the iris/pupil */
+}
+
+.upper-lid {
+  top: -10px; /* Position the upper eyelid */
+}
+
+.lower-lid {
+  bottom: -10px; /* Position the lower eyelid */
+}
+
+.iris {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  background: radial-gradient(circle, #5a4e42 15%, #3e3224 70%, #1e170d 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pupil {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #000000;
+  border-radius: 50%;
+  transition: transform 0.1s ease-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.pupil::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.iris::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+/* Hover effect to animate eyelids */
+.eye:hover .upper-lid {
+  /* top: 20px; Move the upper lid upwards when hovered */
+  scale: 2.2;
+}
+
+.eye:hover .lower-lid {
+  /* bottom: -20px; Move the lower lid downwards when hovered */
+  scale: 2.2;
+}
+
+.eye:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
