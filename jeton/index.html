@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeton</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="w-full text-white min-h-screen overflow-hidden">
+      <!-- Front Page -->
+      <div class="relative w-screen h-screen bg-[#f84d35] z-0">
+        <video
+          class="absolute inset-0"
+          src="https://jetonbucket.fra1.cdn.digitaloceanspaces.com/jeton/2024-08-08T10-52-41.402Z-jeton-homepage-hd2.mp4#t=0.01"
+          type="video/mp4"
+          autoplay
+          muted
+          loop="metadata"
+        ></video>
+
+        <div class="absolute inset-0 flex flex-col justify-between text-white">
+          <!-- Top Nav -->
+          <nav class="flex justify-between items-center px-24 py-8">
+            <div class="text-6xl font-bold font-serif">Jeton</div>
+            <div class="flex space-x-4">
+              <div class="relative group">
+                <button
+                  class="group text-[24px] flex bg-transparent border border-gray-50 border-opacity-15 px-5 py-3 rounded-2xl transition"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="white"
+                    stroke-width="2"
+                    width="30"
+                    height="35"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2c2.5 2 4 5.5 4 10s-1.5 8-4 10c-2.5-2-4-5.5-4-10S9.5 4 12 2z"
+                    />
+                  </svg>
+                  <span class="px-2">EN</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-7 transform transition-transform group-hover:rotate-180"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                  </svg>
+                </button>
+
+                <!-- Dropdown -->
+                <div
+                  class="absolute hidden group-hover:block bg-white text-gray-900 rounded-lg shadow-lg mt-2 w-40"
+                >
+                  <ul>
+                    <li class="px-4 py-2 hover:bg-gray-300 cursor-pointer">
+                      English
+                    </li>
+                    <li class="px-4 py-2 hover:bg-gray-300 cursor-pointer">
+                      French
+                    </li>
+                    <li class="px-4 py-2 hover:bg-gray-300 cursor-pointer">
+                      Spanish
+                    </li>
+                    <li class="px-4 py-2 hover:bg-gray-300 cursor-pointer">
+                      German
+                    </li>
+                    <li class="px-4 py-2 hover:bg-gray-300 cursor-pointer">
+                      Chinese
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <button
+                class="text-[24px] bg-transparent border border-gray-50 border-opacity-15 px-5 py-3 rounded-2xl transition hover:animate-bounce"
+              >
+                Login
+              </button>
+
+              <button
+                class="text-[24px] bg-white text-[#f84d35] px-5 py-3 rounded-2xl hover:animate-bounce"
+              >
+                Sign Up
+              </button>
+            </div>
+          </nav>
+
+          <!-- center data -->
+          <div class="flex justify-between h-full px-24 mt-80">
+            <div>
+              <h1 class="text-[150px] leading-none mb-4">
+                One app <br />
+                for all needs
+              </h1>
+            </div>
+
+            <div class="flex flex-col gap-6 ml-10">
+              <div class="text-4xl">
+                Single account for all your <br />
+                payments.
+              </div>
+              <div
+                class="w-fit p-1 mt-5 bg-transparent border border-gray-50 rounded-2xl"
+              >
+                <button>
+                  <img src="asset 13.svg" alt="Image 1" class="w-44" />
+                </button>
+              </div>
+              <div
+                class="w-fit p-1 mt-1 bg-transparent border border-gray-50 rounded-2xl"
+              >
+                <button>
+                  <img src="asset 14.svg" alt="Image 2" class="w-44" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- scroll down btn -->
+          <div
+            class="group bg-gray-50 bg-opacity-15 ml-24 px-3 mb-20 text-[16px] w-fit h-fit p-1 mt-5 bg-transparent border border-gray-50 rounded-2xl"
+          >
+            <button class="flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-7 transform transition-transform group-hover:rotate-180"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
+              <span class="mt-1">Scroll</span>
+            </button>
+          </div>
+
+          <!-- main nav bottom -->
+          <nav
+            class="w-fit bg-[#f84d35] flex justify-between space-x-6 text-[22px] items-center py-1 mb-8 px-2 fixed bottom-0 left-0 right-0 mx-auto rounded-full"
+          >
+            <div class="p-3 bg-[#f36c6c] rounded-3xl">
+              <a href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="30"
+                  height="30"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M3 9.5L12 3l9 6.5v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-11z"
+                  />
+                  <polyline points="9 22 9 12 15 12 15 22" /></svg
+              ></a>
+            </div>
+
+            <div class="group flex hover:bg-[#f36c6c] p-2 rounded-3xl">
+              <a href="#">Personal</a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-7 transform transition-transform group-hover:rotate-180"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
+            </div>
+
+            <div class="group flex hover:bg-[#f36c6c] p-2 rounded-3xl">
+              <a href="#">Buissness</a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-7 ml-1 mt-1"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <path d="M3 9h18M9 21V9"></path>
+              </svg>
+            </div>
+
+            <div class="group flex hover:bg-[#f36c6c] p-2 rounded-3xl">
+              <a href="#">Company</a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-7 transform transition-transform group-hover:rotate-180"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="white"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
