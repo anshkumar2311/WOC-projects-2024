@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeton</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <style>
+      .marker {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        background: red;
+        border-radius: 50%;
+        z-index: 999;
+      }
+
+      .center-marker {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 0, 0, 0.5);
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+      }
+    </style>
   </head>
 
   <body>
@@ -148,6 +172,7 @@
               <span class="mt-1">Scroll</span>
             </button>
           </div>
+          http://localhost:5173/
 
           <!-- main nav bottom -->
           <nav
@@ -225,5 +250,56 @@
         </div>
       </div>
     </main>
+    <!-- Spacer for scroll -->
+    <div class="center-marker"></div>
+
+    <!-- Spacer for scroll -->
+    <div class="h-[300vh]">
+      <!-- Pinned container -->
+      <div
+        class="main-container h-screen w-full sticky top-0 flex items-center justify-center overflow-hidden"
+      >
+        <h1
+          class="heading absolute text-6xl font-bold text-red-500 text-center z-10 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+        >
+          Unify your <br />finances
+        </h1>
+
+        <div class="cards-container w-full h-full relative">
+          <!-- Exchange Card - Top Left -->
+          <div
+            class="card absolute rounded-xl shadow-lg w-[300px] -translate-x-1/2 -translate-y-1/2"
+          >
+            <img src="asset 15.png" />
+          </div>
+
+          <!-- Balance Card - Top Right -->
+          <div
+            class="card absolute rounded-xl shadow-lg w-[300px] -translate-x-1/2 -translate-y-1/2"
+          >
+            <img src="asset 16.png" />
+          </div>
+
+          <!-- Payment Card - Bottom Right -->
+          <div
+            class="card absolute rounded-xl shadow-lg w-[300px] -translate-x-1/2 -translate-y-1/2"
+          >
+            <img src="asset 17.png" />
+          </div>
+          <div
+            class="card absolute rounded-xl shadow-lg w-[300px] -translate-x-1/2 -translate-y-1/2"
+          >
+            <img src="asset 19.png" />
+          </div>
+          <div
+            class="card absolute rounded-xl shadow-lg w-[300px] -translate-x-1/2 -translate-y-1/2"
+          >
+            <img src="asset 18.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
