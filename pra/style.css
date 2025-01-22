@@ -1,0 +1,343 @@
+:root {
+    --primary-blue: #0066ff;
+    --primary-blue-glow: rgba(0, 102, 255, 0.3);
+    --dark-bg: #000000;
+    --card-bg: #111111;
+    --card-bg-transparent: rgba(17, 17, 17, 0.8);
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --accent-orange: #ff6b00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Elements */
+.bg-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(90deg, var(--card-bg) 1px, transparent 1px) 0 0 / 50px 50px,
+        linear-gradient(var(--card-bg) 1px, transparent 1px) 0 0 / 50px 50px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, transparent 0%, var(--dark-bg) 100%);
+    pointer-events: none;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-text {
+    color: var(--primary-blue);
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-primary);
+}
+
+.menu-btn {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+}
+
+/* Main Content */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 2rem 0;
+}
+
+.content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.title {
+    font-size: 6rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    line-height: 1;
+    position: relative;
+}
+
+.subtitle {
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+}
+
+.explore-btn {
+    background-color: var(--primary-blue);
+    color: var(--text-primary);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px var(--primary-blue-glow);
+}
+
+.explore-btn:hover {
+    background-color: #0052cc;
+    transform: translateY(-2px);
+}
+
+/* Performance Card */
+.performance-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-header span {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.monthly {
+    opacity: 0.7;
+}
+
+.performance-graph {
+    height: 100px;
+    background-color: var(--dark-bg);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.graph-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(180deg, var(--primary-blue) 0%, transparent 100%);
+    opacity: 0.2;
+}
+
+/* Robot Section */
+.robot-container {
+    position: relative;
+    width: 100%;
+}
+
+.robot-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, var(--primary-blue-glow) 0%, transparent 70%);
+    filter: blur(30px);
+    pointer-events: none;
+}
+
+.robot-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Stat Cards */
+.stat-card {
+    position: absolute;
+    background-color: var(--card-bg-transparent);
+    padding: 1.25rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.temperature {
+    top: 1rem;
+    right: 1rem;
+}
+
+.temperature .stat-value {
+    color: var(--accent-orange);
+}
+
+.energy {
+    bottom: 1rem;
+    right: 1rem;
+    width: 250px;
+}
+
+.energy-consumption {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.energy-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.energy-bars {
+    display: flex;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.bar {
+    height: 4px;
+    flex: 1;
+    background-color: var(--primary-blue);
+    border-radius: 2px;
+    opacity: 0.3;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .content-right {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 0 1rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}

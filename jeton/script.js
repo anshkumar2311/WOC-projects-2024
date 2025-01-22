@@ -9,7 +9,7 @@ const mainTl = gsap.timeline({
   scrollTrigger: {
     trigger: ".main-container",
     start: "top top",
-    end: "+=100%",
+    end: "bottom 50%",
     scrub: true,
     pin: true,
     markers: true,

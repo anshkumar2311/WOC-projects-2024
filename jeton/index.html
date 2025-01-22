@@ -172,7 +172,6 @@
               <span class="mt-1">Scroll</span>
             </button>
           </div>
-          http://localhost:5173/
 
           <!-- main nav bottom -->
           <nav
@@ -254,7 +253,7 @@
     <div class="center-marker"></div>
 
     <!-- Spacer for scroll -->
-    <div class="h-[300vh]">
+    <div class="h-full">
       <!-- Pinned container -->
       <div
         class="main-container h-screen w-full sticky top-0 flex items-center justify-center overflow-hidden"
@@ -299,6 +298,89 @@
         </div>
       </div>
     </div>
+
+    <div class="h-full">
+      <div class="word text-8xl font-bold font-sans text-center">
+        <h1 class="text-green-500">Add</h1>
+        <h1 class="text-blue-500">Send</h1>
+        <h1 class="text-pink-500">Exchange</h1>
+      </div>
+    </div>
+
+    <section class="w-full h-screen">
+      <div class="relative w-full h-screen bg-[#f84d35] z-0 overflow-hidden">
+        <!-- Fullscreen Background Video -->
+        <video
+          class="absolute top-0 left-0 w-full h-full object-cover"
+          src="https://jetonbucket.fra1.cdn.digitaloceanspaces.com/jeton/2024-08-07T15-59-55.780Z-jeton-3dapp-mobile.mp4#t=0.01"
+          type="video/mp4"
+          autoplay
+          muted
+          loop="metadata"
+        ></video>
+
+        <!-- Content Overlay -->
+        <div
+          class="absolute inset-0 flex flex-col justify-center text-white ml-20 px-6"
+        >
+          <!-- Main Heading -->
+          <div class="text-[60px] md:text-[90px] font-bold leading-tight">
+            <p>All your finances,<br />in one app.</p>
+          </div>
+
+          <!-- Subheading -->
+          <div class="text-[24px] md:text-[40px] mt-6">
+            Join 1M+ happy users today.
+          </div>
+
+          <!-- Get Started Button -->
+          <div class="mt-8">
+            <button
+              class="text-[18px] md:text-[24px] bg-white text-[#f84d35] px-6 py-3 rounded-2xl hover:bg-[#ffe0dc] transition"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+
+        <!-- Footer Section with Images -->
+        <div class="absolute bottom-8 ml-20 flex space-x-8">
+          <button>
+            <img src="asset 13.svg" alt="Image 1" class="w-36 md:w-44" />
+          </button>
+          <button>
+            <img src="asset 13.svg" alt="Image 2" class="w-36 md:w-44" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="h-full w-full text-[#f73b20] flex justify-center mt-60">
+      <div>
+        <div
+          class="w-fit border border-[#f73b20] p-1 text-16 flex ml-64 rounded-xl"
+        >
+          <p>Jeton Card</p>
+        </div>
+        <div class="text-[45px] mt-20 leading-tight text-center font-medium">
+          <p>
+            Contactless payments? Sure. <br />
+            Spending limits? Check.<br />
+            Card freezing? Also check
+          </p>
+        </div>
+        <div class="mt-20 rounded-xl">
+          <video
+            class="absolute object-cover h-[513px] w-[830px]"
+            src="https://jetonbucket.fra1.cdn.digitaloceanspaces.com/jeton/2024-10-16T16-23-22.921Z-jeton-card-rip.mp4#t=0.01"
+            type="video/mp4"
+            autoplay
+            muted
+            loop="metadata"
+          ></video>
+        </div>
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>
